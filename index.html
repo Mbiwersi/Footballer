@@ -1,0 +1,71 @@
+<!-- ******************************
+Live site:
+https://footballer.surge.sh/
+****************************** -->
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Footballer</title>
+  <link rel="stylesheet" href="footballer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="footballer_api.js"></script>   
+  <script src="footballer.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Footballer <small><span class="pull-right" style="font-size:75%">Welcome Peyton!</span></small></h1>
+
+    <div id="games-container" style="display:none">
+      <div class="well well-sm">
+        <form class="form-inline">
+          <input class="form-control" type="text" placeholder="search" id="searchField" style="width:25%"/>
+
+          <div class="checkbox">
+            <label>
+              <input type="radio" id="all" name="filter" checked/>
+              All
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="radio" id="winsOnly" name="filter"/>
+              Wins
+            </label>
+
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="radio" id="lossesOnly" name="filter"/>
+              Losses
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="radio" id="tiesOnly" name="filter"/>
+              Ties
+            </label>
+          </div>
+
+          <span class="btn btn-primary" style="float:right;" onclick="revert(event)">X</span>
+        </form>
+      </div>
+
+      <h2 id="details"></h2>
+      <table id="games"></table>
+    </div>
+
+    <div id="teams-container">
+      <h2>Driftless Region</h2>
+      <table id="teams" class="highlightable"></table>
+    </div>
+
+  </div>
+</body>
+</html>

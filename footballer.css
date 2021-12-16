@@ -1,0 +1,115 @@
+table{
+    width: 100%;
+    margin-bottom: 25%;
+}
+
+table thead tr td{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1% 0em;
+}
+
+/*city header */
+table thead tr td:first-child{
+    text-align: left;
+    padding-left: 1%;
+}
+
+table tbody tr td{
+    text-align: center;
+    border: 1px black solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* City data */
+table.highlightable tbody tr td.team-city-data{
+    text-align: left;
+    padding-left: 1%;
+}
+
+/* name data */
+table tbody tr td.team-name-data{
+    text-align: left;
+    padding-left: 1%;
+}
+
+/* alternate gray and white rows */
+table.highlightable tbody tr:nth-child(2n+0){
+    background-color: rgb(230, 230, 230);
+}
+
+/* Highlight the table rows */
+table.highlightable tbody tr:hover{
+    background-color: rgb(174, 174, 226);
+}
+
+/* changing the games table */
+#games{
+    width: 100%;
+}
+
+/* header labels in the games table */
+#games thead tr{
+    background-color: black;
+    color: white;
+}
+
+/* games table header labels */
+#games thead tr td{
+    text-align: center;
+}
+
+
+/* Make the home header label be on the aligned left */
+#games thead tr td:first-child{
+    text-align: left;
+}
+
+
+/* Alternate with a gray background in the games table */
+#games tbody tr:nth-child(2n+0){
+    background-color: rgb(230, 230, 230);
+
+}
+
+#games tbody tr td{
+    border: 1px black solid;
+}
+
+/* Center the score in the games table */
+#games tbody tr td.score{
+    text-align: center;
+}
+
+/* Center the date in the games table */
+#games tbody tr td.date{
+    text-align: center;
+}
+
+#games tbody tr td.result{
+    text-align: center;
+}
+
+/* Make wins appear green */
+#games tbody tr td[result = 'win'] div::first-letter{
+    background-color: green;
+    color: white;
+    font-size: large;
+
+}
+
+/* Make losses appear red */
+#games tbody tr td[result = 'loss'] div::first-letter{
+    background-color: red;
+    color: white;
+    font-size: large;
+
+}
+
+#games tbody tr td[result = 'tie'] div::first-letter{
+    background-color: black;
+    color: white;
+    font-size: large;
+}
